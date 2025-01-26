@@ -1548,7 +1548,7 @@ body:not(.uicore-mobile-nav-show) .uicore-ham .bar:nth-child(2) {
   .uicore-nav-menu
   ul.uicore-menu
   li.menu-item
-  > a {
+  > a, .a {
   padding-right: var(--uicore-header--menu-spaceing);
   padding-left: var(--uicore-header--menu-spaceing);
 }
@@ -1564,7 +1564,7 @@ body:not(.uicore-mobile-nav-show) .uicore-ham .bar:nth-child(2) {
 .uicore-mobile-menu-wrapper .uicore-menu .menu-item > a,
 .uicore-nav-menu .uicore-nav .sub-menu:not(.uicore-megamenu) > li a,
 .uicore-nav-menu .uicore-nav .uicore-menu > .menu-item > a,
-.uicore-navbar .uicore-btn {
+.uicore-navbar .uicore-btn, .a {
   font-family: var(--uicore-header--menu-typo-f, "Inter");
   font-weight: var(--uicore-header--menu-typo-w, "600");
   line-height: var(--uicore-header--menu-typo-h, "1.2");
