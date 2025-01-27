@@ -1828,6 +1828,7 @@ nav.uicore-container.uicore {
   height: inherit;
   max-width: unset;
   width: auto;
+  display: block;
 }
 .uicore-navbar .uicore-branding a .uicore-logo.uicore-main {
   position: relative;
