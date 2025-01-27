@@ -61,6 +61,23 @@
   > .elementor-widget-container {
   margin: 0px 0px -120px 100px;
 }
+.loc{
+  flex-direction: row-reverse !important;
+}
+.loc-img{
+  margin: 0px 0px -95px 0px !important;
+}
+.loc-img img{
+  border-radius: 0px 24px 0px 0px !important;
+}
+.loc-sub-img{
+  text-align: right !important;
+  right: -40px;
+}
+.loc-btn{
+  display: flex;
+  justify-content: right;
+}
 .elementor-630 .elementor-element.elementor-element-25e73c9 {
   text-align: right;
 }
@@ -1234,7 +1251,8 @@
 .elementor-630
   .elementor-element.elementor-element-cf4fe34
   > .elementor-element-populated {
-  padding: 0px 0px 160px 0px;
+  padding: 0px 0px 40px 0px;
+  gap: 25px;
 }
 .elementor-630
   .elementor-element.elementor-element-c2a0039
@@ -1250,7 +1268,7 @@
 .elementor-630
   .elementor-element.elementor-element-b139fd6
   > .elementor-widget-container {
-  padding: 0px 64px 0px 0px;
+  padding: 0px 17px 0px 0px;
 }
 .elementor-630
   .elementor-element.elementor-element-b139fd6
@@ -1418,7 +1436,7 @@ body:not(.rtl)
 .elementor-630
   .elementor-element.elementor-element-4ec0a58
   > .elementor-widget-container {
-  margin: 0px 0px 0px -80px;
+  margin: 0px 0px 0px 0px;
 }
 .elementor-630 .elementor-element.elementor-element-4ec0a58 {
   text-align: right;
