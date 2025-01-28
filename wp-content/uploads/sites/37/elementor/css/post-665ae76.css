@@ -6,6 +6,13 @@
   ):not(:last-child):not(.elementor-absolute) {
   margin-bottom: 16px;
 }
+.form-no-mrg {
+  margin-bottom: 0px !important;
+  margin-block-end: 0px !important;
+}
+.pad{
+  padding: 8px 0px 10px 0px !important;
+}
 .elementor-665 .elementor-element.elementor-element-b1a21bf .mf-input,
 .elementor-665
   .elementor-element.elementor-element-b1a21bf
