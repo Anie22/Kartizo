@@ -62,13 +62,17 @@
         margin-top: 3px;
         border: 1px solid #ccc;
         border-radius: 6px !important;
-        font-size: 14px;
-        color: #616161b0;
+        font-size: 15px !important;
       }
 
       textarea {
         resize: none;
         height: 50px;
+      }
+
+      input,
+      textarea {
+        color: #010101;
       }
 
       input::placeholder,
@@ -86,6 +90,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: #616161b0;
       }
 
       .dropdown-icon {
@@ -104,7 +109,7 @@
         padding: 8px;
         margin-top: 5px;
         border-radius: 6px;
-        font-size: 14px;
+        font-size: 15px;
       }
 
       .option {
@@ -2323,7 +2328,7 @@
             this.getAttribute("data-value");
           document.getElementById("serviceOptions").style.display = "none";
           document.getElementById("dropdownIcon").style.transform = "rotate(0deg)";
-          document.getElementById("selectBox").firstElementChild.style.color = '#475569';
+          document.getElementById("selectBox").firstElementChild.style.color = '#010101';
         });
       });
 
