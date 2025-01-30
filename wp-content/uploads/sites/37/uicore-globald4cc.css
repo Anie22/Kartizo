@@ -4195,7 +4195,7 @@ h1.entry-title {
 }
 body .uicore-transparent-color nav,
 .uicore-navbar {
-  --uicore-header--logo-h: 34px;
+  --uicore-header--logo-h: 47px;
   --uicore-header--logo-padding: 24px;
   --uicore-header--menu-spaceing: 20px;
   --uicore-header--menu-typo-f: var(
@@ -4238,7 +4238,7 @@ body .uicore-transparent-color nav,
 }
 @media (max-width: 767px) {
   .uicore-navbar {
-    --uicore-header--logo-h: 32px;
+    --uicore-header--logo-h: 38px;
   }
   #wrapper-navbar nav {
     max-width: 95%;

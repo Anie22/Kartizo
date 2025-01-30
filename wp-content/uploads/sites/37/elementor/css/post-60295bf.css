@@ -1,3 +1,13 @@
+.es-rounded img{
+  border-radius: 20px;
+}
+.es-pos{
+  position: relative;
+  top: -70px;
+}
+.es-pos img{
+  border-radius: 250px 250px 24px 24px;
+}
 .elementor-602
   .elementor-element.elementor-element-502d6e1
   > .elementor-background-overlay {
@@ -290,7 +300,11 @@ body.rtl .elementor-602 .elementor-element.elementor-element-5e32119 {
   transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 .elementor-602 .elementor-element.elementor-element-f335346 {
-  padding: 0px 0px 180px 0px;
+  padding: 0px 0px 45px 0px;
+}
+.ele-line{
+  align-content: normal !important;
+  gap: 22px;
 }
 .elementor-602
   .elementor-element.elementor-element-e5b74a2
@@ -649,7 +663,7 @@ body.rtl .elementor-602 .elementor-element.elementor-element-5e32119 {
 .elementor-602
   .elementor-element.elementor-element-08b5d2f
   .elementor-heading-title {
-  font-size: 44px;
+  font-size: 30px;
 }
 .elementor-602
   .elementor-element.elementor-element-c40db88:not(

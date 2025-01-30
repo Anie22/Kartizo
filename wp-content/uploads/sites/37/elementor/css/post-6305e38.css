@@ -116,6 +116,21 @@
   ):not(:last-child):not(.elementor-absolute) {
   margin-bottom: 16px;
 }
+.ser-pad{
+  padding: 40px 0px 0px 0px !important;
+}
+.ser-height{
+  min-height: 280px !important;
+  cursor: pointer;
+}
+.ser-dis{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ser-dis p{
+  line-height: 115%;
+}
 .elementor-630
   .elementor-element.elementor-element-59202e2
   > .elementor-element-populated {
