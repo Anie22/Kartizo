@@ -5,6 +5,11 @@
   position: relative;
   top: -70px;
 }
+@media only screen and (max-width: 992px) {
+  .es-pos{
+    top: 0px;
+  }
+}
 .es-pos img{
   border-radius: 250px 250px 24px 24px;
 }
