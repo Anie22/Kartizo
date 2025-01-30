@@ -3245,12 +3245,13 @@ body.uicore-sidebar-left main.uicore-section .uicore-container {
   }
 }
 .elementor-kit-4 {
-  --e-global-color-uicore_primary: #ffd749;
-  --e-global-color-uicore_secondary: #0d65d9;
+  --e-global-color-uicore_primary: #f37700;
+  --e-global-color-uicore_secondary: #0c1c30;
+  --e-global-color-uicore_secondary2: #0d65d9;
   --e-global-color-uicore_accent: #3fcef6;
   --e-global-color-uicore_headline: #020617;
   --e-global-color-uicore_body: #475569;
-  --e-global-color-uicore_dark: #083f87;
+  --e-global-color-uicore_dark: #0c1c30;
   --e-global-color-uicore_light: #f2fcfe;
   --e-global-color-uicore_white: #ffffff;
   --e-global-typography-uicore_primary-font-family: "Poppins";
@@ -3287,7 +3288,7 @@ button.metform-btn:not(.toggle),
   text-transform: None;
   line-height: 1em;
   letter-spacing: 0em;
-  color: var(--e-global-color-uicore_headline);
+  color: var( --e-global-color-uicore_white);
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-color: rgba(154, 154, 154, 0.3);

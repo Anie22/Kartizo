@@ -309,6 +309,107 @@
             }));
       })((window, document), window._wpemojiSettings);
     </script>
+    <style>
+      #quoteForm {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        display: block;
+        color: #616161b0;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+
+      input,
+      textarea,
+      .select-box {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #616161b0;
+      }
+
+      textarea{
+        resize: none;
+      }
+
+      input::placeholder,
+      textarea::placeholder{
+        font-size: 14px;
+        color: #61616176;
+      }
+
+      .select-box {
+        background: white;
+        cursor: pointer;
+        padding: 8px;
+      }
+
+      .select-options {
+        display: none;
+        border: 1px solid #ccc;
+        background: white;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        padding: 8px;
+        height: 50px;
+      }
+
+      .option {
+        padding: 8px;
+        cursor: pointer;
+      }
+      .option:hover {
+        background: #f0f0f0;
+      }
+
+      button {
+        background: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 15px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background: #218838;
+      }
+
+      .loader {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .error-box {
+        color: red;
+        background: #ffe6e6;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 480px) {
+        #quoteForm {
+          max-width: 90%;
+          padding: 15px;
+        }
+      }
+    </style>
     <style id="wp-emoji-styles-inline-css">
       img.wp-smiley,
       img.emoji {
@@ -506,10 +607,7 @@
       rel="shortcut icon"
       href="../wp-content/uploads/sites/37/2023/12/Main.png"
     />
-    <link
-      rel="icon"
-      href="../wp-content/uploads/sites/37/2023/12/Main.png"
-    />
+    <link rel="icon" href="../wp-content/uploads/sites/37/2023/12/Main.png" />
     <link
       rel="apple-touch-icon"
       sizes="152x152"
@@ -793,6 +891,28 @@
                   </div>
                 </div>
               </div>
+              <div class="uicore-mobile-head-right">
+                <div class="uicore-cta-wrapper">
+                  <a
+                    href="../book-now/index.html"
+                    target="_self"
+                    class="uicore-btn uicore-inverted"
+                  >
+                    <span class="elementor-button-text"> Book Now </span>
+                  </a>
+                </div>
+                <button
+                  type="button"
+                  class="uicore-toggle uicore-ham"
+                  aria-label="mobile-menu"
+                >
+                  <span class="bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                  </span>
+                </button>
+              </div>
             </nav>
           </div>
         </div>
@@ -864,7 +984,10 @@
                             data-widget_type="text-editor.default"
                           >
                             <div class="elementor-widget-container">
-                              Let Kartizo Global Company LLC handle the heavy lifting. Contact us today for a consultation and discover how we can make your move seamless and stress-free.
+                              Let Kartizo Global Company LLC handle the heavy
+                              lifting. Contact us today for a consultation and
+                              discover how we can make your move seamless and
+                              stress-free.
                             </div>
                           </div>
                         </div>
@@ -877,342 +1000,101 @@
                         <div
                           class="elementor-widget-wrap elementor-element-populated"
                         >
-                          <div
-                            class="elementor-element elementor-element-bf94647 elementor-widget elementor-widget-metform"
-                            data-id="bf94647"
-                            data-element_type="widget"
-                            data-settings='{"mf_form_multistep_status":"no"}'
-                            data-widget_type="metform.default"
-                          >
-                            <div class="elementor-widget-container">
+                          <form id="quoteForm">
+                            <div
+                              id="errorBox"
+                              class="error-box"
+                              style="display: none"
+                            ></div>
+
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name"/>
+
+                            <label for="email">Email</label>
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              required
+                              placeholder="Email"
+                            />
+
+                            <label for="phone">Contact</label>
+                            <input
+                              type="tel"
+                              id="phone"
+                              name="phone"
+                              required
+                              placeholder="US phone number only"
+                            />
+
+                            <label for="service">Service</label>
+                            <div class="custom-select" id="serviceDropdown">
+                              <div id="selectBox" class="select-box">
+                                &#x25BC;
+                              </div>
                               <div
-                                id="mf-response-props-id-665"
-                                data-previous-steps-style=""
-                                data-editswitchopen="no"
-                                data-response_type="alert"
-                                data-erroricon=""
-                                data-successicon=""
-                                data-messageposition=""
-                                class="mf_slide_direction_horizontal no mf-scroll-top-no"
+                                class="select-options"
+                                id="serviceOptions"
+                                style="display: none"
                               >
-                                <div
-                                  class="formpicker_warper formpicker_warper_editable"
-                                  data-metform-formpicker-key="665"
-                                >
-                                  <div class="elementor-widget-container">
-                                    <div
-                                      id="metform-wrap-bf94647-665"
-                                      class="mf-form-wrapper"
-                                      data-form-id="665"
-                                      data-action="../wp-json/metform/v1/entries/insert/665.json"
-                                      data-wp-nonce="ed91a263bf"
-                                      data-form-nonce="8ea4109307"
-                                      data-quiz-summery="false"
-                                      data-save-progress="false"
-                                      data-form-type="general-form"
-                                      data-stop-vertical-effect=""
-                                    ></div>
-
-                                    <!----------------------------- 
-			* controls_data : find the the props passed indie of data attribute
-			* props.SubmitResponseMarkup : contains the markup of error or success message
-			* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-		--------------------------- -->
-
-                                    <script type="text/mf" class="mf-template">
-                                      	function controls_data (value){
-                                      		let currentWrapper = "mf-response-props-id-665";
-                                      		let currentEl = document.getElementById(currentWrapper);
-
-                                      		return currentEl ? currentEl.dataset[value] : false
-                                      	}
-
-
-                                      	let is_edit_mode = '' ? true : false;
-                                      	let message_position = controls_data('messageposition') || 'top';
-
-
-                                      	let message_successIcon = controls_data('successicon') || '';
-                                      	let message_errorIcon = controls_data('erroricon') || '';
-                                      	let message_editSwitch = controls_data('editswitchopen') === 'yes' ? true : false;
-                                      	let message_proClass = controls_data('editswitchopen') === 'yes' ? 'mf_pro_activated' : '';
-
-                                      	let is_dummy_markup = is_edit_mode && message_editSwitch ? true : false;
-
-
-                                      	return html`
-                                      		<form
-                                      			className="metform-form-content"
-                                      			ref=${parent.formContainerRef}
-                                      			onSubmit=${ validation.handleSubmit( parent.handleFormSubmit ) }
-
-                                      			>
-
-
-                                      			${is_dummy_markup ? message_position === 'top' ?  props.ResponseDummyMarkup(message_successIcon, message_proClass) : '' : ''}
-                                      			${is_dummy_markup ? ' ' :  message_position === 'top' ? props.SubmitResponseMarkup`${parent}${state}${message_successIcon}${message_errorIcon}${message_proClass}` : ''}
-
-                                      			<!--------------------------------------------------------
-                                      			*** IMPORTANT / DANGEROUS ***
-                                      			${html``} must be used as in immediate child of "metform-form-main-wrapper"
-                                      			class otherwise multistep form will not run at all
-                                      			---------------------------------------------------------->
-
-                                      			<div className="metform-form-main-wrapper" key=${'hide-form-after-submit'} ref=${parent.formRef}>
-                                      			${html`
-                                      						<div data-elementor-type="wp-post" key="2" data-elementor-id="665" className="elementor elementor-665" data-elementor-settings="{&quot;element_pack_global_tooltip_width&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true}}">
-                                      				<div className="elementor-section elementor-top-section elementor-element elementor-element-6af8a24 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="6af8a24" data-element_type="section">
-                                      				<div className="elementor-container elementor-column-gap-no">
-                                      			<div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e361a45" data-id="e361a45" data-element_type="column">
-                                      	<div className="elementor-widget-wrap elementor-element-populated">
-                                      				<div className="elementor-element elementor-element-b1a21bf elementor-widget elementor-widget-mf-text" data-id="b1a21bf" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;,&quot;mf_input_get_params_enable&quot;:&quot;no&quot;}" data-widget_type="mf-text.default">
-                                      		<div className="elementor-widget-container">
-
-                                      <div className="mf-input-wrapper">
-                                      					<label className="mf-input-label" htmlFor="mf-input-text-b1a21bf">
-                                      			${ parent.decodeEntities(`Full Name`) } 					<span className="mf-input-required-indicator"></span>
-                                      		</label>
-
-                                      	<input
-                                      		type="text"
-                                      		className="mf-input "
-                                      		id="mf-input-text-b1a21bf"
-                                      		name="mf-text"
-                                      		placeholder="${ parent.decodeEntities(`Your Name`) } "
-                                      							onInput=${parent.handleChange}
-                                      			onBlur=${parent.handleChange}
-                                      			aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-                                      			ref=${el =>{
-                                      										parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)
-                                      			}}
-                                      						/>
-
-                                      					<${validation.ErrorMessage}
-                                      			errors=${validation.errors}
-                                      			name="mf-text"
-                                      			as=${html`<span className="mf-error-message"></span>`}
-                                      			/>
-
-                                      			</div>
-
-                                      				</div>
-                                      		</div>
-                                      				<div className="elementor-element elementor-element-b1a21bf elementor-widget elementor-widget-mf-text" data-id="b1a21bf" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;,&quot;mf_input_get_params_enable&quot;:&quot;no&quot;}" data-widget_type="mf-text.default">
-                                      		<div className="elementor-widget-container">
-
-                                      <div className="mf-input-wrapper">
-                                      					<label className="mf-input-label" htmlFor="mf-input-text-b1a21bf">
-                                      			${ parent.decodeEntities(`Contact`) } 					<span className="mf-input-required-indicator"></span>
-                                      		</label>
-
-                                      	<input
-                                      		type="tel"
-                                      		className="mf-input "
-                                      		id="mf-input-text-b1a21bf"
-                                      		name="mf-text"
-                                      		placeholder="${ parent.decodeEntities(`US phone no only`) } "
-                                      							onInput=${parent.handleChange}
-                                      			onBlur=${parent.handleChange}
-                                      			aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-                                      			ref=${el =>{
-                                      										parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)
-                                      			}}
-                                      						/>
-
-                                      					<${validation.ErrorMessage}
-                                      			errors=${validation.errors}
-                                      			name="mf-text"
-                                      			as=${html`<span className="mf-error-message"></span>`}
-                                      			/>
-
-                                      			</div>
-
-                                      				</div>
-                                      		</div>
-                                      		<div className="elementor-element elementor-element-f108bcc elementor-widget elementor-widget-mf-select" data-id="f108bcc" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-select&quot;,&quot;mf_input_list&quot;:[{&quot;mf_input_option_text&quot;:&quot;Packing and Unpacking Service&quot;,&quot;mf_input_option_value&quot;:&quot;value-1&quot;,&quot;_id&quot;:&quot;53fba73&quot;,&quot;mf_input_option_status&quot;:&quot;&quot;,&quot;mf_input_option_selected&quot;:&quot;&quot;},{&quot;mf_input_option_text&quot;:&quot;Coperate and Local Relocations&quot;,&quot;mf_input_option_value&quot;:&quot;value-2&quot;,&quot;_id&quot;:&quot;a839ec1&quot;,&quot;mf_input_option_status&quot;:&quot;&quot;,&quot;mf_input_option_selected&quot;:&quot;&quot;},{&quot;mf_input_option_text&quot;:&quot;Downsizing Service&quot;,&quot;mf_input_option_value&quot;:&quot;value-3&quot;,&quot;_id&quot;:&quot;2d3f89a&quot;,&quot;mf_input_option_status&quot;:&quot;&quot;,&quot;mf_input_option_selected&quot;:&quot;&quot;}],&quot;mf_input_get_params_enable&quot;:&quot;no&quot;}" data-widget_type="mf-select.default">
-                                      		<div className="elementor-widget-container">
-
-
-                                      <div className="mf-input-wrapper">
-                                      					<label className="mf-input-label" htmlFor="mf-input-select-f108bcc">
-                                      			${ parent.decodeEntities(`Service Type`) } 					<span className="mf-input-required-indicator"></span>
-                                      		</label>
-
-                                                <${props.Select}
-                                                    className=${"mf-input mf-input-select  " + ( validation.errors['mf-select'] ? 'mf-invalid' : '' )}
-                                                    classNamePrefix="mf_select"
-                                                    name="mf-select"
-                                                    placeholder="${ parent.decodeEntities(`Select one`) } "
-                                                    isSearchable=${false}
-                                                    options=${[{"label":"Packing and Unpacking Service","value":"value-1","isDisabled":false},{"label":"Coperate and Local Relocations","value":"value-2","isDisabled":false},{"label":"Downsizing Service","value":"value-3","isDisabled":false}]}
-                                                    value=${parent.getValue("mf-select") ? [{"label":"Packing and Unpacking Service","value":"value-1","isDisabled":false},{"label":"Coperate and Local Relocations","value":"value-2","isDisabled":false},{"label":"Downsizing Service","value":"value-3","isDisabled":false}].filter(item => item.value === parent.getValue("mf-select"))[0] : []}
-                                                    onChange=${(e)=> parent.handleSelect(e, "mf-select")}
-                                                    ref=${() => {
-                                      		                    register({ name: "mf-select" }, parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false}));
-                                                        if ( parent.getValue("mf-select") === '' && false ) {
-                                      		    parent.setValue( 'mf-select', '', true );
-                                                            parent.handleChange({
-                                                                target: {
-                                                                    name: 'mf-select',
-                                                                    value: ''
-                                                                }
-                                                            });
-                                                        }
-                                                    }}
-                                                    />
-
-                                                				<${validation.ErrorMessage}
-                                      			errors=${validation.errors}
-                                      			name="mf-select"
-                                      			as=${html`<span className="mf-error-message"></span>`}
-                                      			/>
-                                      						</div>
-
-
-                                      				</div>
-                                      		</div>
-                                      		<div className="elementor-element elementor-element-f0be6ae elementor-widget elementor-widget-mf-date" data-id="f0be6ae" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-date&quot;,&quot;mf_input_get_params_enable&quot;:&quot;no&quot;}" data-widget_type="mf-date.default">
-                                      		<div className="elementor-widget-container">
-
-                                      <div className="mf-input-wrapper">
-                                      					<label className="mf-input-label" htmlFor="mf-input-date-f0be6ae">
-                                      			${ parent.decodeEntities(`Date`) } 					<span className="mf-input-required-indicator"></span>
-                                      		</label>
-
-                                      	<${props.Flatpickr}
-                                      			name="mf-date"
-                                      			className="mf-input mf-date-input mf-left-parent  "
-                                      			placeholder="${ parent.decodeEntities(`Date`) } "
-                                      			options=${{"minDate":"","maxDate":"","dateFormat":"m-d-Y","enableTime":"","disable":[],"mode":"single","static":true,"disableMobile":true,"time_24hr":false}}
-                                      			value=${parent.getValue('mf-date')}
-                                      			onInput=${parent.handleDateTime}
-                                      			aria-invalid=${validation.errors['mf-date'] ? 'true' : 'false'}
-                                      			ref=${el => props.DateWidget(
-                                      					el,
-                                      					'',
-                                      					{"message":"This field is required.","required":false},
-                                      					register,
-                                      					parent
-                                      				)}
-                                      			/>
-
-                                      					<${validation.ErrorMessage}
-                                      			errors=${validation.errors}
-                                      			name="mf-date"
-                                      			as=${html`<span className="mf-error-message"></span>`}
-                                      			/>
-                                      						</div>
-
-
-                                      				</div>
-                                      		</div>
-                                      		<div className="elementor-element elementor-element-2d95b7f elementor-widget elementor-widget-mf-text" data-id="2d95b7f" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;,&quot;mf_input_get_params_enable&quot;:&quot;no&quot;}" data-widget_type="mf-text.default">
-                                      		<div className="elementor-widget-container">
-
-                                      <div className="mf-input-wrapper">
-                                      					<label className="mf-input-label" htmlFor="mf-input-text-2d95b7f">
-                                      			${ parent.decodeEntities(`Address`) } 					<span className="mf-input-required-indicator"></span>
-                                      		</label>
-
-                                      	<input
-                                      		type="text"
-                                      		className="mf-input "
-                                      		id="mf-input-text-2d95b7f"
-                                      		name="mf-text"
-                                      		placeholder="${ parent.decodeEntities(`Your Address`) } "
-                                      							onInput=${parent.handleChange}
-                                      			onBlur=${parent.handleChange}
-                                      			aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-                                      			ref=${el =>{
-                                      										parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)
-                                      			}}
-                                      						/>
-
-                                      					<${validation.ErrorMessage}
-                                      			errors=${validation.errors}
-                                      			name="mf-text"
-                                      			as=${html`<span className="mf-error-message"></span>`}
-                                      			/>
-
-                                      			</div>
-
-                                      				</div>
-                                      		</div>
-                                      		<div className="elementor-element elementor-element-2d95b7f elementor-widget elementor-widget-mf-text" data-id="2d95b7f" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;,&quot;mf_input_get_params_enable&quot;:&quot;no&quot;}" data-widget_type="mf-text.default">
-                                      		<div className="elementor-widget-container">
-
-                                      <div className="mf-input-wrapper">
-                                      					<label className="mf-input-label" htmlFor="mf-input-text-2d95b7f">
-                                      			${ parent.decodeEntities(`Additional Information`) } 					<span className="mf-input-required-indicator"></span>
-                                      		</label>
-
-                                      	<input
-                                      		type="text"
-                                      		className="mf-input "
-                                      		id="mf-input-text-2d95b7f"
-                                      		name="mf-text"
-                                      		placeholder="${ parent.decodeEntities(`Other Info`) } "
-                                      							onInput=${parent.handleChange}
-                                      			onBlur=${parent.handleChange}
-                                      			aria-invalid=${validation.errors['mf-text'] ? 'true' : 'false'}
-                                      			ref=${el =>{
-                                      										parent.activateValidation({"message":"This field is required.","minLength":1,"maxLength":"","type":"none","required":false,"expression":"null"}, el)
-                                      			}}
-                                      						/>
-
-                                      					<${validation.ErrorMessage}
-                                      			errors=${validation.errors}
-                                      			name="mf-text"
-                                      			as=${html`<span className="mf-error-message"></span>`}
-                                      			/>
-
-                                      			</div>
-
-                                      				</div>
-                                      		</div>
-                                      		<div className="elementor-element elementor-element-3118406 elementor-widget elementor-widget-mf-gdpr-consent form-no-mrg" data-id="3118406" data-element_type="widget" data-settings="{&quot;mf_input_name&quot;:&quot;mf-gdpr-consent&quot;,&quot;mf_input_get_params_enable&quot;:&quot;no&quot;}" data-widget_type="mf-gdpr-consent.default">
-                                      		<div className="elementor-widget-container pad">
-
-                                      <div className="mf-input-wrapper">
-
-                                      					<${validation.ErrorMessage}
-                                      			errors=${validation.errors}
-                                      			name="mf-gdpr-consent"
-                                      			as=${html`<span className="mf-error-message"></span>`}
-                                      			/>
-
-                                      			</div>
-
-                                      				</div>
-                                      		</div>
-                                      		<div className="elementor-element elementor-element-4c8b847 mf-btn--left elementor-widget elementor-widget-mf-button" data-id="4c8b847" data-element_type="widget" data-widget_type="mf-button.default">
-                                      		<div className="elementor-widget-container">
-                                      					<div className="mf-btn-wraper " data-mf-form-conditional-logic-requirement="">
-                                      					<button type="submit" className="metform-btn metform-submit-btn " id="">
-                                      			<span>${ parent.decodeEntities(`Book Now`) } </span>
-                                      		</button>
-                                      	        </div>
-                                            				</div>
-                                      		</div>
-                                      			</div>
-                                      </div>
-                                      			</div>
-                                      </div>
-                                      		</div>
-                                      					`}
-                                      			</div>
-
-                                      			${is_dummy_markup ? message_position === 'bottom' ? props.ResponseDummyMarkup(message_successIcon, message_proClass) : '' : ''}
-                                      			${is_dummy_markup ? ' ' : message_position === 'bottom' ? props.SubmitResponseMarkup`${parent}${state}${message_successIcon}${message_errorIcon}${message_proClass}` : ''}
-
-                                      		</form>
-                                      	`
-                                    </script>
-                                  </div>
+                                <div class="option" data-value="packing">
+                                  Packing and Unpacking
+                                </div>
+                                <div class="option" data-value="relocation">
+                                  Corporate & Local Relocations
+                                </div>
+                                <div class="option" data-value="downsizing">
+                                  Downsizing Service
                                 </div>
                               </div>
+                              <input
+                                type="hidden"
+                                id="service"
+                                name="service"
+                                required
+                                placeholder="select a service"
+                              />
                             </div>
-                          </div>
+
+                            <label for="date">Preferred Date</label>
+                            <input
+                              type="text"
+                              id="customDate"
+                              name="date"
+                              placeholder="Select a date"
+                              required
+                            />
+
+                            <label for="time">Preferred Time</label>
+                            <input
+                              type="text"
+                              id="customTime"
+                              name="time"
+                              placeholder="Select a time"
+                              required
+                            />
+
+                            <label for="address">Address</label>
+                            <input
+                              type="text"
+                              id="address"
+                              name="address"
+                              required
+                            />
+
+                            <label for="info">Additional Information</label>
+                            <textarea id="info" name="info" placeholder="Other info"></textarea>
+
+                            <button type="submit">Book Now</button>
+                            <div
+                              id="loader"
+                              class="loader"
+                              style="display: none"
+                            >
+                              Submitting...
+                            </div>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -1288,7 +1170,16 @@
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      Our service coverage extends throughout the Greater Houston metropolitan area. From the bustling streets of Downtown to the suburban comfort of The Woodlands, and from the energy corridor of Katy to the coastal charm of Clear Lake, we're there for you. We typically accommodate moves within a 50-mile radius of Houston's center, ensuring comprehensive coverage for our clients throughout the region.
+                                      Our service coverage extends throughout
+                                      the Greater Houston metropolitan area.
+                                      From the bustling streets of Downtown to
+                                      the suburban comfort of The Woodlands, and
+                                      from the energy corridor of Katy to the
+                                      coastal charm of Clear Lake, we're there
+                                      for you. We typically accommodate moves
+                                      within a 50-mile radius of Houston's
+                                      center, ensuring comprehensive coverage
+                                      for our clients throughout the region.
                                     </div>
                                   </div>
                                   <div class="bdt-ep-accordion-item">
@@ -1331,7 +1222,16 @@
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      We believe in transparent, comprehensive pricing that takes into account the unique aspects of your move. Our experienced estimators consider the size of your move, distance, service level required, and any special handling needs. After conducting either an in-person or virtual assessment of your space, we provide a detailed quote that outlines all costs involved, ensuring no surprises on moving day.
+                                      We believe in transparent, comprehensive
+                                      pricing that takes into account the unique
+                                      aspects of your move. Our experienced
+                                      estimators consider the size of your move,
+                                      distance, service level required, and any
+                                      special handling needs. After conducting
+                                      either an in-person or virtual assessment
+                                      of your space, we provide a detailed quote
+                                      that outlines all costs involved, ensuring
+                                      no surprises on moving day.
                                     </div>
                                   </div>
                                   <div class="bdt-ep-accordion-item">
@@ -1368,13 +1268,25 @@
                                         role="heading"
                                         class="bdt-ep-title-text bdt-flex-inline bdt-flex-middle"
                                       >
-                                        What safety measures do you take during the moving process?
+                                        What safety measures do you take during
+                                        the moving process?
                                       </span>
                                     </div>
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      Safety is paramount at Kartizo Global. Every team member undergoes thorough background checks and regular safety training. We maintain our equipment to the highest standards and implement comprehensive property protection measures. This includes using floor covers and door jamb protectors during every move. When requested, we also follow enhanced safety protocols, including COVID-19 precautions, to ensure everyone's well-being.
+                                      Safety is paramount at Kartizo Global.
+                                      Every team member undergoes thorough
+                                      background checks and regular safety
+                                      training. We maintain our equipment to the
+                                      highest standards and implement
+                                      comprehensive property protection
+                                      measures. This includes using floor covers
+                                      and door jamb protectors during every
+                                      move. When requested, we also follow
+                                      enhanced safety protocols, including
+                                      COVID-19 precautions, to ensure everyone's
+                                      well-being.
                                     </div>
                                   </div>
                                   <div class="bdt-ep-accordion-item">
@@ -1411,13 +1323,23 @@
                                         role="heading"
                                         class="bdt-ep-title-text bdt-flex-inline bdt-flex-middle"
                                       >
-                                        Can you help with furniture assembly/disassembly?
+                                        Can you help with furniture
+                                        assembly/disassembly?
                                       </span>
                                     </div>
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      Absolutely! Our professional movers are skilled in both the  disassembly and reassembly of furniture pieces. We carefully document the original setup, secure all components, and ensure proper hardware labeling. When we reach your new location, we'll reassemble everything according to your preferred floor plan, ensuring each piece is exactly where you want it.
+                                      Absolutely! Our professional movers are
+                                      skilled in both the disassembly and
+                                      reassembly of furniture pieces. We
+                                      carefully document the original setup,
+                                      secure all components, and ensure proper
+                                      hardware labeling. When we reach your new
+                                      location, we'll reassemble everything
+                                      according to your preferred floor plan,
+                                      ensuring each piece is exactly where you
+                                      want it.
                                     </div>
                                   </div>
                                   <div class="bdt-ep-accordion-item">
@@ -1454,13 +1376,23 @@
                                         role="heading"
                                         class="bdt-ep-title-text bdt-flex-inline bdt-flex-middle"
                                       >
-                                        What should I do with items I don't want to move?
+                                        What should I do with items I don't want
+                                        to move?
                                       </span>
                                     </div>
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      We understand the challenge of dealing with unwanted items during a move. Our team can connect you with reputable local donation centers, estate sale services, and recycling programs. We also have partnerships with professional junk removal services and document shredding companies. You can trust us to handle the entire disposal process professionally and responsibly.
+                                      We understand the challenge of dealing
+                                      with unwanted items during a move. Our
+                                      team can connect you with reputable local
+                                      donation centers, estate sale services,
+                                      and recycling programs. We also have
+                                      partnerships with professional junk
+                                      removal services and document shredding
+                                      companies. You can trust us to handle the
+                                      entire disposal process professionally and
+                                      responsibly.
                                     </div>
                                   </div>
                                   <div class="bdt-ep-accordion-item">
@@ -1497,13 +1429,23 @@
                                         role="heading"
                                         class="bdt-ep-title-text bdt-flex-inline bdt-flex-middle"
                                       >
-                                        Do you move specialty items like pianos or artwork?
+                                        Do you move specialty items like pianos
+                                        or artwork?
                                       </span>
                                     </div>
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      Yes, we specialize in moving high-value and delicate items. Our team has extensive training in handling pianos, fine art, antiques, wine collections, and other specialty pieces. Each item receives customized attention with appropriate equipment and protection methods. We understand that these pieces often hold both monetary and sentimental value, and we treat them accordingly.
+                                      Yes, we specialize in moving high-value
+                                      and delicate items. Our team has extensive
+                                      training in handling pianos, fine art,
+                                      antiques, wine collections, and other
+                                      specialty pieces. Each item receives
+                                      customized attention with appropriate
+                                      equipment and protection methods. We
+                                      understand that these pieces often hold
+                                      both monetary and sentimental value, and
+                                      we treat them accordingly.
                                     </div>
                                   </div>
                                   <div class="bdt-ep-accordion-item">
@@ -1540,13 +1482,23 @@
                                         role="heading"
                                         class="bdt-ep-title-text bdt-flex-inline bdt-flex-middle"
                                       >
-                                        What happens if something gets damaged during the move?
+                                        What happens if something gets damaged
+                                        during the move?
                                       </span>
                                     </div>
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      While we pride ourselves on prevention, we maintain a straightforward claims process should any damage occur. We immediately document any incidents and initiate a prompt claims process. Our team works diligently to arrange professional repair or replacement options, ensuring fair compensation based on declared value. We're committed to quick resolution and complete client satisfaction.
+                                      While we pride ourselves on prevention, we
+                                      maintain a straightforward claims process
+                                      should any damage occur. We immediately
+                                      document any incidents and initiate a
+                                      prompt claims process. Our team works
+                                      diligently to arrange professional repair
+                                      or replacement options, ensuring fair
+                                      compensation based on declared value.
+                                      We're committed to quick resolution and
+                                      complete client satisfaction.
                                     </div>
                                   </div>
                                   <div class="bdt-ep-accordion-item">
@@ -1582,13 +1534,25 @@
                                       <span
                                         role="heading"
                                         class="bdt-ep-title-text bdt-flex-inline bdt-flex-middle"
-                                      > How do you handle corporate relocations differently from residential moves?
+                                      >
+                                        How do you handle corporate relocations
+                                        differently from residential moves?
                                       </span>
                                     </div>
                                     <div
                                       class="bdt-ep-accordion-content bdt-accordion-content"
                                     >
-                                      Corporate relocations require a unique approach focused on minimizing business disruption. We offer flexible scheduling including after-hours moving options, specialized handling of IT equipment, and comprehensive project management throughout the process. Our team coordinates with all stakeholders, providing regular updates and ensuring a seamless transition that keeps your business running smoothly.
+                                      Corporate relocations require a unique
+                                      approach focused on minimizing business
+                                      disruption. We offer flexible scheduling
+                                      including after-hours moving options,
+                                      specialized handling of IT equipment, and
+                                      comprehensive project management
+                                      throughout the process. Our team
+                                      coordinates with all stakeholders,
+                                      providing regular updates and ensuring a
+                                      seamless transition that keeps your
+                                      business running smoothly.
                                     </div>
                                   </div>
                                 </div>
@@ -1626,7 +1590,9 @@
                             data-widget_type="text-editor.default"
                           >
                             <div class="elementor-widget-container">
-                              Here are answers to common questions about our moving services. Can't find what you're looking for? Give us a call at:
+                              Here are answers to common questions about our
+                              moving services. Can't find what you're looking
+                              for? Give us a call at:
                             </div>
                           </div>
                           <div
@@ -1990,42 +1956,54 @@
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a href="/our-services/corporate-local-relocation.html">
+                                    <a
+                                      href="/our-services/corporate-local-relocation.html"
+                                    >
                                       <span class="elementor-icon-list-text"
                                         >Corporate and local relocations</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a href="/our-services/downsizing-service.html">
+                                    <a
+                                      href="/our-services/downsizing-service.html"
+                                    >
                                       <span class="elementor-icon-list-text"
                                         >Downsizing</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a href="/our-services/packing-unpacking-service.html">
+                                    <a
+                                      href="/our-services/packing-unpacking-service.html"
+                                    >
                                       <span class="elementor-icon-list-text"
                                         >Packing and Unpacking</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a href="/our-solutions/move-management-for-seniors.html">
+                                    <a
+                                      href="/our-solutions/move-management-for-seniors.html"
+                                    >
                                       <span class="elementor-icon-list-text"
                                         >Senior Moving Solution</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a href="/our-solutions/move-management-for-businesses.html">
+                                    <a
+                                      href="/our-solutions/move-management-for-businesses.html"
+                                    >
                                       <span class="elementor-icon-list-text"
                                         >Corporate Clients page</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a href="/our-solutions/move-management-for-individual&family.html">
+                                    <a
+                                      href="/our-solutions/move-management-for-individual&family.html"
+                                    >
                                       <span class="elementor-icon-list-text"
                                         >Individuals and Families</span
                                       >
@@ -2568,7 +2546,8 @@
                         alt=""
                         decoding="async"
                       /><span class="ui-menu-item-wrapper"
-                        >Move Management Solutions for Individuals & Families</span
+                        >Move Management Solutions for Individuals &
+                        Families</span
                       ></a
                     >
                   </li>
@@ -2647,6 +2626,119 @@
       <!-- 1.6 uicore_body_end -->
     </div>
     <!-- 1.7 uicore_after_body_content -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#customDate", { enableTime: false, dateFormat: "Y-m-d" });
+      flatpickr("#customTime", {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+      });
+
+      document
+        .getElementById("selectBox")
+        .addEventListener("click", function () {
+          let options = document.getElementById("serviceOptions");
+          options.style.display =
+            options.style.display === "none" ? "block" : "none";
+        });
+
+      document.querySelectorAll(".option").forEach((option) => {
+        option.addEventListener("click", function () {
+          document.getElementById("selectBox").innerText = this.innerText;
+          document.getElementById("service").value =
+            this.getAttribute("data-value");
+          document.getElementById("serviceOptions").style.display = "none";
+        });
+      });
+
+      document
+        .getElementById("quoteForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("errorBox").style.display = "none";
+          document.getElementById("loader").style.display = "block";
+
+          let fullName = document.getElementById("name").value.trim();
+          let email = document.getElementById("email").value.trim();
+          let phoneNumber = document.getElementById("phone").value.trim();
+          let service = document.getElementById("service").value;
+          let date = document.getElementById("customDate").value.trim();
+          let time = document.getElementById("customTime").value.trim();
+          let address = document.getElementById("address").value.trim();
+          let message = document.getElementById("info").value.trim();
+
+          let errorBox = document.getElementById("errorBox");
+          errorBox.innerHTML = "";
+
+          if (
+            !fullName ||
+            !email ||
+            !phoneNumber ||
+            !service ||
+            !date ||
+            !time ||
+            !address ||
+            !message
+          ) {
+            errorBox.innerHTML =
+              "All fields except Additional Information are required.";
+            errorBox.style.display = "block";
+            document.getElementById("loader").style.display = "none";
+            return;
+          }
+
+          if (!/^[a-zA-Z\s]+$/.test(fullName)) {
+            errorBox.innerHTML = "Name must contain only letters.";
+            errorBox.style.display = "block";
+            document.getElementById("loader").style.display = "none";
+            return;
+          }
+
+          let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            errorBox.innerHTML = "Invalid email format.";
+            errorBox.style.display = "block";
+            document.getElementById("loader").style.display = "none";
+            return;
+          }
+
+          // let phonePattern = /^[0-9]{12}$/;
+          // if (!phonePattern.test(phoneNumber)) {
+          //   errorBox.innerHTML = "Phone number must be 10 digits plus country code.";
+          //   errorBox.style.display = "block";
+          //   document.getElementById("loader").style.display = "none";
+          //   return;
+          // }
+
+          let formData = {
+            fullName,
+            email,
+            phoneNumber,
+            service,
+            date,
+            time,
+            address,
+            message,
+          };
+
+          fetch("https://kartizo-api.onrender.com/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("loader").style.display = "none";
+              alert("Form submitted successfully!");
+            })
+            .catch((error) => {
+              document.getElementById("loader").style.display = "none";
+              errorBox.innerHTML = "Error submitting form. Please try again.";
+              errorBox.style.display = "block";
+            });
+        });
+    </script>
     <script>
       var uicore_frontend = { back: "Back", rtl: "", mobile_br: "1025" };
       console.log("Using PageBolt v.2.0.0");

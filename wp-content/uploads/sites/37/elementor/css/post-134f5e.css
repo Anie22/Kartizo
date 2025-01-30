@@ -224,6 +224,9 @@ body:not(.rtl)
 .elementor-13 .elementor-element.elementor-element-8e3f53f .elementor-button {
   background-color: var(--e-global-color-uicore_white);
 }
+.col-text{
+  color: var(--e-global-color-uicore_headline);
+}
 .elementor-13
   .elementor-element.elementor-element-8e3f53f
   .elementor-button:hover,

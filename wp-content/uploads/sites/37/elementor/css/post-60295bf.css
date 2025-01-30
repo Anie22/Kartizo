@@ -631,7 +631,7 @@ body.rtl .elementor-602 .elementor-element.elementor-element-5e32119 {
 .elementor-602
   .elementor-element.elementor-element-23808bd.elementor-column.elementor-element[data-element_type="column"]
   > .elementor-widget-wrap.elementor-element-populated {
-  align-content: flex-end;
+  /* align-content: flex-end; */
   align-items: flex-end;
 }
 .elementor-602
@@ -658,7 +658,7 @@ body.rtl .elementor-602 .elementor-element.elementor-element-5e32119 {
   .elementor-element.elementor-element-2929dcd
   .elementor-heading-title {
   font-size: 20px;
-  color: var(--e-global-color-uicore_secondary);
+  color: var( --e-global-color-uicore_secondary2);
 }
 .elementor-602
   .elementor-element.elementor-element-08b5d2f
