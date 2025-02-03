@@ -2408,12 +2408,12 @@
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
           })
-            .then((response) => response.json())
+            .then((response) =>  console.log(response.json()))
             .then((data) => {
               document.getElementById("loader").style.display = "none";
               errorBox.innerHTML = response;
               errorBox.style.display = "block";
-              console.log(response)
+              console.log(data)
             })
             .catch((error) => {
               document.getElementById("loader").style.display = "none";
