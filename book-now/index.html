@@ -2417,9 +2417,11 @@
             })
             .catch((error) => {
               document.getElementById("loader").style.display = "none";
-              errorBox.innerHTML = "Error submitting form. Please try again.";
+              errorBox.innerHTML = error;
               errorBox.style.display = "block";
-              alert(error)
+              alert(error.data.JSON())
+              alert(error.json())
+              console.log(error)
             });
         });
     </script>
