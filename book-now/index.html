@@ -2354,8 +2354,8 @@
 
           if (
             !fullName ||
-            !email ||
             !phoneNumber ||
+            !email ||
             !service ||
             !date ||
             !time ||
@@ -2413,11 +2413,13 @@
               document.getElementById("loader").style.display = "none";
               errorBox.innerHTML = response.message;
               errorBox.style.display = "block";
+              alert(response)
             })
             .catch((error) => {
               document.getElementById("loader").style.display = "none";
               errorBox.innerHTML = "Error submitting form. Please try again.";
               errorBox.style.display = "block";
+              alert(error)
             });
         });
     </script>
