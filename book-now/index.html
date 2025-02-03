@@ -2410,9 +2410,8 @@
           })
             .then(response => {
               if (!response.ok) {
-                  throw new Error(`HTTP error! Status: ${response}`);
+                  console.log(response)
               }
-              console.log(response)
               return response.json();
             })
             .then((data) => {
@@ -2420,6 +2419,7 @@
               errorBox.innerHTML = data;
               errorBox.style.display = "block";
               console.log(data)
+              console.log(response)
             })
             .catch((error) => {
               document.getElementById("loader").style.display = "none";
