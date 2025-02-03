@@ -2411,7 +2411,7 @@
             .then((response) => response.json())
             .then((data) => {
               document.getElementById("loader").style.display = "none";
-              errorBox.innerHTML = response.message;
+              errorBox.innerHTML = response;
               errorBox.style.display = "block";
               console.log(response)
             })
