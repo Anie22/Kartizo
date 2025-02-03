@@ -2410,9 +2410,9 @@
           })
             .then(response => {
               if (!response.ok) {
-                  throw new Error(`HTTP error! Status: ${response.status}`);
+                  throw new Error(`HTTP error! Status: ${response}`);
               }
-              console.log(response.json())
+              console.log(response)
               return response.json();
             })
             .then((data) => {
