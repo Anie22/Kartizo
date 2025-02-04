@@ -749,6 +749,7 @@
                               id="info"
                               name="info"
                               placeholder="Other info"
+                              required
                             ></textarea>
 
                             <button type="submit">Book Now</button>
@@ -2326,8 +2327,8 @@
 
           if (
             !fullName ||
-            !email ||
             !phoneNumber ||
+            !email ||
             !service ||
             !date ||
             !time ||
@@ -2381,13 +2382,18 @@
             address,
             message,
           };
-
+          console.log(formData)
           fetch("https://kartizo-api.onrender.com/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
           })
-            .then((response) => response.json())
+            .then(response => {
+              if (!response.ok) {
+                  console.log(response)
+              }
+              return response.json();
+            })
             .then((data) => {
               document.getElementById("loader").style.display = "none";
               errorBox.innerHTML = data.message;
@@ -2405,7 +2411,7 @@
             })
             .catch((error) => {
               document.getElementById("loader").style.display = "none";
-              errorBox.innerHTML = "Error submitting form. Please try again.";
+              errorBox.innerHTML = error;
               errorBox.style.display = "block";
               errorBox.classList.add('error-box')
 
