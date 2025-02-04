@@ -74,6 +74,13 @@
   text-align: right !important;
   right: -40px;
 }
+@media only screen and (max-width: 600px) {
+  .loc-sub-img{
+    text-align: left !important;
+    right: 0px !important;
+    top: 70px;
+  }
+}
 .loc-btn{
   display: flex;
   justify-content: right;

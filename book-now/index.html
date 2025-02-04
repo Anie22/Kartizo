@@ -141,8 +141,16 @@
       }
 
       .error-box {
-        color: red;
-        background: #ffe6e6;
+        color: #ffe6e6;
+        background: red;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      .success {
+        color: #ffe6e6;
+        background: green;
         padding: 10px;
         border-radius: 4px;
         margin-bottom: 10px;
@@ -282,30 +290,39 @@
       media="all"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <script src="../wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="../wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" title="JSON" type="application/json" href="../wp-json/wp/v2/pages/663.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.html?rsd" />
     <meta name="theme-color" content="#FFD749" />
     <link
       rel="shortcut icon"
-      href="../wp-content/uploads/sites/37/2023/12/Main.png"
+      href="../wp-content/uploads/sites/37/2023/12/Main.webp"
     />
-    <link rel="icon" href="../wp-content/uploads/sites/37/2023/12/Main.png" />
+    <link
+      rel="alternate"
+      title="JSON"
+      type="application/json"
+      href="../wp-json/wp/v2/pages/663.json"
+    />
+    <link rel="icon" href="../wp-content/uploads/sites/37/2023/12/Main.webp" />
     <link
       rel="apple-touch-icon"
       sizes="152x152"
-      href="../wp-content/uploads/sites/37/2023/12/Main.png"
+      href="../wp-content/uploads/sites/37/2023/12/Main.webp"
     />
     <link
       rel="apple-touch-icon"
       sizes="120x120"
-      href="../wp-content/uploads/sites/37/2023/12/Main.png"
+      href="../wp-content/uploads/sites/37/2023/12/Main.webp"
     />
     <link
       rel="apple-touch-icon"
       sizes="76x76"
-      href="../wp-content/uploads/sites/37/2023/12/Main.png"
+      href="../wp-content/uploads/sites/37/2023/12/Main.webp"
     />
     <link
       rel="apple-touch-icon"
-      href="../wp-content/uploads/sites/37/2023/12/Main.png"
+      href="../wp-content/uploads/sites/37/2023/12/Main.webp"
     />
   </head>
 
@@ -335,7 +352,7 @@
                 <a href="../index.html" rel="home">
                   <img
                     class="uicore uicore-logo uicore-main"
-                    src="../wp-content/uploads/sites/37/2023/12/Main.png"
+                    src="../wp-content/uploads/sites/37/2023/12/Main.webp"
                     alt="Cleaning Company"
                     width="324"
                     height="96"
@@ -355,6 +372,13 @@
                       <a href="/"
                         ><span class="ui-menu-item-wrapper">Home</span></a
                       >
+                    <li
+                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"
+                    >
+                      <a href="../about-us/index.html"
+                        ><span class="ui-menu-item-wrapper">About Us</span></a
+                      >
+                    </li>
                     </li>
                     <li
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-686"
@@ -366,21 +390,13 @@
                       >
                       <ul class="sub-menu">
                         <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-716 ui-has-description"
+                          class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
                         >
                           <a
-                            href="/our-services/packing-unpacking-service.html"
+                            href="/our-services/corporate-service.html#space-planning"
                             aria-current="page"
-                            ><img
-                              loading="lazy"
-                              width="96"
-                              height="96"
-                              src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-1.webp"
-                              class="ui-menu-img"
-                              alt=""
-                              decoding="async"
-                            /><span class="ui-menu-item-wrapper"
-                              >Packing & Unpacking Services</span
+                            ><span class="ui-menu-item-wrapper"
+                              >Space Planning</span
                             ></a
                           >
                         </li>
@@ -390,16 +406,19 @@
                           <a
                             href="/our-services/downsizing-service.html"
                             aria-current="page"
-                            ><img
-                              loading="lazy"
-                              width="96"
-                              height="96"
-                              src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-2.webp"
-                              class="ui-menu-img"
-                              alt=""
-                              decoding="async"
-                            /><span class="ui-menu-item-wrapper"
+                            ><span class="ui-menu-item-wrapper"
                               >Downsizing Services</span
+                            ></a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-716 ui-has-description"
+                        >
+                          <a
+                            href="/our-services/packing-unpacking-service.html"
+                            aria-current="page"
+                            ><span class="ui-menu-item-wrapper"
+                              >Packing & Unpacking Services</span
                             ></a
                           >
                         </li>
@@ -407,18 +426,21 @@
                           class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
                         >
                           <a
-                            href="/our-services/corporate-local-relocation.html"
+                            href="/our-services/corporate-service.html#clear-out-and-prep"
                             aria-current="page"
-                            ><img
-                              loading="lazy"
-                              width="96"
-                              height="96"
-                              src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-3.webp"
-                              class="ui-menu-img"
-                              alt=""
-                              decoding="async"
-                            /><span class="ui-menu-item-wrapper"
-                              >Corporate & Local Relocations</span
+                            ><span class="ui-menu-item-wrapper"
+                              >Clear out and prep for sale</span
+                            ></a
+                          >
+                        </li>
+                        <li
+                          class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
+                        >
+                          <a
+                            href="/our-services/corporate-service.html#storage"
+                            aria-current="page"
+                            ><span class="ui-menu-item-wrapper"
+                              >Storage</span
                             ></a
                           >
                         </li>
@@ -437,18 +459,10 @@
                           class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-716 ui-has-description"
                         >
                           <a
-                            href="/our-solutions/move-management-for-seniors.html"
+                            href="/our-solutions/solutions-for-seniors.html"
                             aria-current="page"
-                            ><img
-                              loading="lazy"
-                              width="96"
-                              height="96"
-                              src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-1.webp"
-                              class="ui-menu-img"
-                              alt=""
-                              decoding="async"
-                            /><span class="ui-menu-item-wrapper"
-                              >Move Management Solutions for Seniors</span
+                            ><span class="ui-menu-item-wrapper"
+                              >Solutions for Seniors</span
                             ></a
                           >
                         </li>
@@ -456,19 +470,10 @@
                           class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-717 ui-has-description"
                         >
                           <a
-                            href="/our-solutions/move-management-for-individual&family.html"
+                            href="/our-solutions/solutions-for-individual&family.html"
                             aria-current="page"
-                            ><img
-                              loading="lazy"
-                              width="96"
-                              height="96"
-                              src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-2.webp"
-                              class="ui-menu-img"
-                              alt=""
-                              decoding="async"
-                            /><span class="ui-menu-item-wrapper"
-                              >Move Management Solutions for Individuals &
-                              Families</span
+                            ><span class="ui-menu-item-wrapper"
+                              >Solutions for Individuals & Families</span
                             ></a
                           >
                         </li>
@@ -476,18 +481,10 @@
                           class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
                         >
                           <a
-                            href="/our-solutions/move-management-for-businesses.html"
+                            href="/our-solutions/solutions-for-businesses.html"
                             aria-current="page"
-                            ><img
-                              loading="lazy"
-                              width="96"
-                              height="96"
-                              src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-3.webp"
-                              class="ui-menu-img"
-                              alt=""
-                              decoding="async"
-                            /><span class="ui-menu-item-wrapper"
-                              >Move Management Solutions for Businesses</span
+                            ><span class="ui-menu-item-wrapper"
+                              >Solutions for Businesses</span
                             ></a
                           >
                         </li>
@@ -496,17 +493,8 @@
                     <li
                       class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"
                     >
-                      <a href="../about-us/index.html"
-                        ><span class="ui-menu-item-wrapper">About Us</span></a
-                      >
-                    </li>
-                    <li
-                      class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"
-                    >
                       <a href="../service-area/service-area.html"
-                        ><span class="ui-menu-item-wrapper"
-                          >Service Area</span
-                        ></a
+                        ><span class="ui-menu-item-wrapper">Service Area</span></a
                       >
                     </li>
                   </ul>
@@ -590,6 +578,7 @@
                     class="elementor-section elementor-top-section elementor-element elementor-element-b24c433 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                     data-id="b24c433"
                     data-element_type="section"
+                    id="quForm"
                   >
                     <div class="elementor-background-overlay"></div>
                     <div
@@ -657,7 +646,6 @@
                           <form id="quoteForm">
                             <div
                               id="errorBox"
-                              class="error-box"
                               style="display: none"
                             ></div>
 
@@ -666,7 +654,6 @@
                               type="text"
                               id="name"
                               name="name"
-                              required
                               placeholder="Enter your name"
                             />
 
@@ -675,7 +662,6 @@
                               type="email"
                               id="email"
                               name="email"
-                              required
                               placeholder="Email"
                             />
 
@@ -684,14 +670,13 @@
                               type="tel"
                               id="phone"
                               name="phone"
-                              required
                               placeholder="US phone number only"
                             />
 
                             <label for="service">Service</label>
                             <div class="custom-select" id="serviceDropdown">
                               <div id="selectBox" class="select-box">
-                                <span>Select an option</span>
+                                <span id="selectCon">Select an option</span>
                                 <span id="dropdownIcon" class="dropdown-icon"
                                   >&#x25BC;</span
                                 >
@@ -701,21 +686,35 @@
                                 id="serviceOptions"
                                 style="display: none"
                               >
-                                <div class="option" data-value="packing">
-                                  Packing and Unpacking
-                                </div>
-                                <div class="option" data-value="relocation">
-                                  Corporate & Local Relocations
+                                <div class="option" data-value="space planning">
+                                  Space planning
                                 </div>
                                 <div class="option" data-value="downsizing">
-                                  Downsizing Service
+                                  Downsizing service
+                                </div>
+                                <div class="option" data-value="packing and unpacking">
+                                  Packing and unpacking
+                                </div>
+                                <div class="option" data-value="clear out and prep">
+                                  Clear out and prep for sale
+                                </div>
+                                <div class="option" data-value="storage">
+                                  Storage
+                                </div>
+                                <div class="option" data-value="seniors">
+                                  Seniors solution
+                                </div>
+                                <div class="option" data-value="individuals and families">
+                                  Individuals and family solution
+                                </div>
+                                <div class="option" data-value="business">
+                                  Business solution
                                 </div>
                               </div>
                               <input
                                 type="hidden"
                                 id="service"
                                 name="service"
-                                required
                                 placeholder="select a service"
                               />
                             </div>
@@ -735,7 +734,6 @@
                               id="customTime"
                               name="time"
                               placeholder="Select a time"
-                              required
                             />
 
                             <label for="address">Address</label>
@@ -744,7 +742,6 @@
                               id="address"
                               name="address"
                               placeholder="Enter your address"
-                              required
                             />
 
                             <label for="info">Additional Information</label>
@@ -1444,7 +1441,7 @@
                         <img
                           width="1040"
                           height="902"
-                          src="../wp-content/uploads/sites/37/2023/12/Moving-box.jpg"
+                          src="../wp-content/uploads/sites/37/2023/12/Moving-box.webp"
                           class="attachment-full size-full wp-image-544"
                           alt=""
                           sizes="(max-width: 1040px) 100vw, 1040px"
@@ -1481,7 +1478,7 @@
                         <img
                           width="324"
                           height="96"
-                          src="../wp-content/uploads/sites/37/2023/12/White.png"
+                          src="../wp-content/uploads/sites/37/2023/12/White.webp"
                           class="attachment-full size-full wp-image-5"
                           alt=""
                           sizes="(max-width: 324px) 100vw, 324px"
@@ -1624,54 +1621,56 @@
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a
-                                      href="/our-services/corporate-local-relocation.html"
-                                    >
+                                    <a href="/our-services/corporate-service.html#space-planning">
                                       <span class="elementor-icon-list-text"
-                                        >Corporate and local relocations</span
+                                        >Space Planning</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a
-                                      href="/our-services/downsizing-service.html"
-                                    >
+                                    <a href="/our-services/corporate-service.html#storage">
+                                      <span class="elementor-icon-list-text"
+                                        >Storage</span
+                                      >
+                                    </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                    <a href="/our-services/downsizing-service.html">
                                       <span class="elementor-icon-list-text"
                                         >Downsizing</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a
-                                      href="/our-services/packing-unpacking-service.html"
-                                    >
+                                    <a href="/our-services/corporate-service.html#clear-out-and-prep">
+                                      <span class="elementor-icon-list-text"
+                                        >Clear out and prep for sale</span
+                                      >
+                                    </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                    <a href="/our-services/packing-unpacking-service.html">
                                       <span class="elementor-icon-list-text"
                                         >Packing and Unpacking</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a
-                                      href="/our-solutions/move-management-for-seniors.html"
-                                    >
+                                    <a href="/our-solutions/solutions-for-seniors.html">
                                       <span class="elementor-icon-list-text"
                                         >Senior Moving Solution</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a
-                                      href="/our-solutions/move-management-for-businesses.html"
-                                    >
+                                    <a href="/our-solutions/solutions-for-businesses.html">
                                       <span class="elementor-icon-list-text"
                                         >Corporate Clients page</span
                                       >
                                     </a>
                                   </li>
                                   <li class="elementor-icon-list-item">
-                                    <a
-                                      href="/our-solutions/move-management-for-individual&family.html"
-                                    >
+                                    <a href="/our-solutions/solutions-for-individual&family.html">
                                       <span class="elementor-icon-list-text"
                                         >Individuals and Families</span
                                       >
@@ -2075,7 +2074,7 @@
             <a href="../index.html" rel="home">
               <img
                 class="uicore uicore-logo"
-                src="../wp-content/uploads/sites/37/2023/12/Main.png"
+                src="../wp-content/uploads/sites/37/2023/12/Main.webp"
                 alt="Cleaning Company"
               />
             </a>
@@ -2112,26 +2111,25 @@
                 >
               </li>
               <li
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"
+              >
+                <a href="../about-us/index.html"
+                  ><span class="ui-menu-item-wrapper">About Us</span></a
+                >
+              </li>
+              <li
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-686"
               >
                 <a><span class="ui-menu-item-wrapper">Our Services</span></a>
                 <ul class="sub-menu">
                   <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-716 ui-has-description"
+                    class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
                   >
                     <a
-                      href="/our-services/packing-unpacking-service.html"
+                      href="/our-services/corporate-service.html#space-planning"
                       aria-current="page"
-                      ><img
-                        loading="lazy"
-                        width="96"
-                        height="96"
-                        src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-1.webp"
-                        class="ui-menu-img"
-                        alt=""
-                        decoding="async"
-                      /><span class="ui-menu-item-wrapper"
-                        >Packing & Unpacking Services</span
+                      ><span class="ui-menu-item-wrapper"
+                        >Space Planning</span
                       ></a
                     >
                   </li>
@@ -2141,16 +2139,19 @@
                     <a
                       href="/our-services/downsizing-service.html"
                       aria-current="page"
-                      ><img
-                        loading="lazy"
-                        width="96"
-                        height="96"
-                        src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-2.webp"
-                        class="ui-menu-img"
-                        alt=""
-                        decoding="async"
-                      /><span class="ui-menu-item-wrapper"
+                      ><span class="ui-menu-item-wrapper"
                         >Downsizing Services</span
+                      ></a
+                    >
+                  </li>
+                  <li
+                    class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-716 ui-has-description"
+                  >
+                    <a
+                      href="/our-services/packing-unpacking-service.html"
+                      aria-current="page"
+                      ><span class="ui-menu-item-wrapper"
+                        >Packing & Unpacking Services</span
                       ></a
                     >
                   </li>
@@ -2158,18 +2159,21 @@
                     class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
                   >
                     <a
-                      href="/our-services/corporate-local-relocation.html"
+                      href="/our-services/corporate-service.html#clear-out-and-prep"
                       aria-current="page"
-                      ><img
-                        loading="lazy"
-                        width="96"
-                        height="96"
-                        src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-3.webp"
-                        class="ui-menu-img"
-                        alt=""
-                        decoding="async"
-                      /><span class="ui-menu-item-wrapper"
-                        >Corporate & Local Relocations</span
+                      ><span class="ui-menu-item-wrapper"
+                        >Clear out and prep for sale</span
+                      ></a
+                    >
+                  </li>
+                  <li
+                    class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
+                  >
+                    <a
+                      href="/our-services/corporate-service.html#storage"
+                      aria-current="page"
+                      ><span class="ui-menu-item-wrapper"
+                        >Storage</span
                       ></a
                     >
                   </li>
@@ -2184,18 +2188,10 @@
                     class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-716 ui-has-description"
                   >
                     <a
-                      href="/our-solutions/move-management-for-seniors.html"
+                      href="/our-solutions/solutions-for-seniors.html"
                       aria-current="page"
-                      ><img
-                        loading="lazy"
-                        width="96"
-                        height="96"
-                        src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-1.webp"
-                        class="ui-menu-img"
-                        alt=""
-                        decoding="async"
-                      /><span class="ui-menu-item-wrapper"
-                        >Move Management Solutions for Seniors</span
+                      ><span class="ui-menu-item-wrapper"
+                        >Solutions for Seniors</span
                       ></a
                     >
                   </li>
@@ -2203,19 +2199,10 @@
                     class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-717 ui-has-description"
                   >
                     <a
-                      href="/our-solutions/move-management-for-individual&family.html"
+                      href="/our-solutions/solutions-for-individual&family.html"
                       aria-current="page"
-                      ><img
-                        loading="lazy"
-                        width="96"
-                        height="96"
-                        src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-2.webp"
-                        class="ui-menu-img"
-                        alt=""
-                        decoding="async"
-                      /><span class="ui-menu-item-wrapper"
-                        >Move Management Solutions for Individuals &
-                        Families</span
+                      ><span class="ui-menu-item-wrapper"
+                        >Solutions for Individuals & Families</span
                       ></a
                     >
                   </li>
@@ -2223,29 +2210,14 @@
                     class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-630 current_page_item menu-item-718 ui-has-description"
                   >
                     <a
-                      href="/our-solutions/move-management-for-businesses.html"
+                      href="/our-solutions/solutions-for-businesses.html"
                       aria-current="page"
-                      ><img
-                        loading="lazy"
-                        width="96"
-                        height="96"
-                        src="../wp-content/uploads/sites/37/2023/12/Cleaning-Company-Submenu-3.webp"
-                        class="ui-menu-img"
-                        alt=""
-                        decoding="async"
-                      /><span class="ui-menu-item-wrapper"
-                        >Move Management Solutions for Businesses</span
+                      ><span class="ui-menu-item-wrapper"
+                        >Solutions for Businesses</span
                       ></a
                     >
                   </li>
                 </ul>
-              </li>
-              <li
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"
-              >
-                <a href="../about-us/index.html"
-                  ><span class="ui-menu-item-wrapper">About Us</span></a
-                >
               </li>
               <li
                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-684"
@@ -2303,27 +2275,27 @@
         dateFormat: "H:i",
       });
 
-      document
-        .getElementById("selectBox")
-        .addEventListener("click", function () {
-          let options = document.getElementById("serviceOptions");
-          let icon = document.getElementById("dropdownIcon");
+        document
+          .getElementById("selectBox")
+          .addEventListener("click", function () {
+            let options = document.getElementById("serviceOptions");
+            let icon = document.getElementById("dropdownIcon");
 
-          if (
-            options.style.display === "none" ||
-            options.style.display === ""
-          ) {
-            options.style.display = "block";
-            icon.style.transform = "rotate(180deg)";
-          } else {
-            options.style.display = "none";
-            icon.style.transform = "rotate(0deg)";
-          }
+            if (
+              options.style.display === "none" ||
+              options.style.display === ""
+            ) {
+              options.style.display = "block";
+              icon.style.transform = "rotate(180deg)";
+            } else {
+              options.style.display = "none";
+              icon.style.transform = "rotate(0deg)";
+            }
         });
 
       document.querySelectorAll(".option").forEach((option) => {
         option.addEventListener("click", function () {
-          document.getElementById("selectBox").firstElementChild.innerText = this.innerText;
+          document.getElementById("selectCon").innerText = this.innerText;
           document.getElementById("service").value =
             this.getAttribute("data-value");
           document.getElementById("serviceOptions").style.display = "none";
@@ -2350,6 +2322,7 @@
 
           let errorBox = document.getElementById("errorBox");
           errorBox.innerHTML = "";
+          let form = document.getElementById("quoteForm")
 
           if (
             !fullName ||
@@ -2362,15 +2335,17 @@
             !message
           ) {
             errorBox.innerHTML =
-              "All fields except Additional Information are required.";
+              "All fields are required.";
             errorBox.style.display = "block";
             document.getElementById("loader").style.display = "none";
+            window.location.href = '#quForm'
             return;
           }
 
           if (!/^[a-zA-Z\s]+$/.test(fullName)) {
             errorBox.innerHTML = "Name must contain only letters.";
             errorBox.style.display = "block";
+              errorBox.classList.add('error-box');
             document.getElementById("loader").style.display = "none";
             return;
           }
@@ -2379,17 +2354,22 @@
           if (!emailPattern.test(email)) {
             errorBox.innerHTML = "Invalid email format.";
             errorBox.style.display = "block";
+              errorBox.classList.add('error-box');
             document.getElementById("loader").style.display = "none";
             return;
           }
 
-          // let phonePattern = /^[0-9]{12}$/;
-          // if (!phonePattern.test(phoneNumber)) {
-          //   errorBox.innerHTML = "Phone number must be 10 digits plus country code.";
-          //   errorBox.style.display = "block";
-          //   document.getElementById("loader").style.display = "none";
-          //   return;
-          // }
+          if (!phoneNumber.startsWith("+1")) {
+            errorBox.innerHTML = "Phone number must start with +1";
+            errorBox.style.display = "block";
+            document.getElementById("loader").style.display = "none";
+              errorBox.classList.add('error-box');
+            return;
+          }
+          
+          setTimeout(() => {
+            errorBox.style.display = "none";
+          }, 2000);
 
           let formData = {
             fullName,
@@ -2410,15 +2390,64 @@
             .then((response) => response.json())
             .then((data) => {
               document.getElementById("loader").style.display = "none";
-              errorBox.innerHTML = response.message;
+              errorBox.innerHTML = data.message;
               errorBox.style.display = "block";
+              errorBox.classList.add('success');
+
+              if(!data.message){
+                errorBox.innerHTML = data.phoneNumber[0];
+              }
+
+              setTimeout(() => {
+                errorBox.style.display = "none";
+                form.reset();
+              }, 3500);
             })
             .catch((error) => {
               document.getElementById("loader").style.display = "none";
               errorBox.innerHTML = "Error submitting form. Please try again.";
               errorBox.style.display = "block";
+              errorBox.classList.add('error-box')
+
+              setTimeout(() => {
+                errorBox.style.display = "none";
+              }, 3500);
             });
+
         });
+    </script>
+    <script>
+      var uicore_frontend = { back: "Back", rtl: "", mobile_br: "1025" };
+      console.log("Using PageBolt v.2.0.0");
+      console.log("Powered By UiCore Framework v.6.0.4");
+    </script>
+    <script type="text/javascript">
+      const lazyloadRunObserver = () => {
+        const lazyloadBackgrounds = document.querySelectorAll(
+          `.e-con.e-parent:not(.e-lazyloaded)`
+        );
+        const lazyloadBackgroundObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                let lazyloadBackground = entry.target;
+                if (lazyloadBackground) {
+                  lazyloadBackground.classList.add("e-lazyloaded");
+                }
+                lazyloadBackgroundObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: "200px 0px 200px 0px" }
+        );
+        lazyloadBackgrounds.forEach((lazyloadBackground) => {
+          lazyloadBackgroundObserver.observe(lazyloadBackground);
+        });
+      };
+      const events = ["DOMContentLoaded", "elementor/lazyload/observe"];
+      events.forEach((event) => {
+        document.addEventListener(event, lazyloadRunObserver);
+      });
     </script>
     <link
       rel="stylesheet"
@@ -2436,6 +2465,12 @@
       rel="stylesheet"
       id="elementor-post-665-css"
       href="../wp-content/uploads/sites/37/elementor/css/post-665ae76.css?ver=1736459310"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="flatpickr-css"
+      href="../wp-content/plugins/metform/public/assets/css/flatpickr.mina560.css?ver=3.9.1"
       media="all"
     />
     <link
@@ -2492,6 +2527,58 @@
       src="../wp-includes/js/dist/element.min1596.js?ver=cb762d190aebbec25b27"
       id="wp-element-js"
     ></script>
+    <script id="metform-app-js-extra">
+      var mf = {
+        postType: "page",
+        restURI:
+          "https:\/\/outgrid.uicore.co\/cleaning-company\/wp-json\/metform\/v1\/forms\/views\/",
+        minMsg1: "Minimum length should be ",
+        Msg2: " character long.",
+        maxMsg1: "Maximum length should be ",
+        maxNum: "Maximum number should be ",
+        minNum: "Minimum number should be ",
+      };
+    </script>
+    <script
+      src="../wp-content/plugins/metform/public/assets/js/appa560.js?ver=3.9.1"
+      id="metform-app-js"
+    ></script>
+    <script id="bdt-uikit-js-extra">
+      var element_pack_ajax_login_config = {
+        ajaxurl:
+          "https:\/\/outgrid.uicore.co\/cleaning-company\/wp-admin\/admin-ajax.php",
+        language: "en",
+        loadingmessage: "Sending user info, please wait...",
+        unknownerror: "Unknown error, make sure access is correct!",
+      };
+      var ElementPackConfig = {
+        ajaxurl:
+          "https:\/\/outgrid.uicore.co\/cleaning-company\/wp-admin\/admin-ajax.php",
+        nonce: "068037adc4",
+        data_table: {
+          language: {
+            sLengthMenu: "Show _MENU_ Entries",
+            sInfo: "Showing _START_ to _END_ of _TOTAL_ entries",
+            sSearch: "Search :",
+            sZeroRecords: "No matching records found",
+            oPaginate: { sPrevious: "Previous", sNext: "Next" },
+          },
+        },
+        contact_form: {
+          sending_msg: "Sending message please wait...",
+          captcha_nd: "Invisible captcha not defined!",
+          captcha_nr: "Could not get invisible captcha response!",
+        },
+        mailchimp: { subscribing: "Subscribing you please wait..." },
+        search: {
+          more_result: "More Results",
+          search_result: "SEARCH RESULT",
+          not_found: "not found",
+        },
+        words_limit: { read_more: "[read more]", read_less: "[read less]" },
+        elements_data: { sections: [], columns: [], widgets: [] },
+      };
+    </script>
     <script
       src="../wp-content/plugins/bdthemes-element-pack/assets/js/bdt-uikit.min4ecf.js?ver=3.21.7"
       id="bdt-uikit-js"
@@ -2509,6 +2596,10 @@
       id="uicore_global-js"
     ></script>
     <script
+      src="../wp-content/plugins/bdthemes-element-pack/assets/js/common/helper.min87db.js?ver=7.18.14"
+      id="element-pack-helper-js"
+    ></script>
+    <script
       src="../wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min1c88.js?ver=3.26.4"
       id="font-awesome-4-shim-js"
     ></script>
@@ -2520,6 +2611,205 @@
       src="../wp-content/plugins/bdthemes-element-pack/assets/js/modules/ep-background-overlay.min87db.js?ver=7.18.14"
       id="ep-background-overlay-js"
     ></script>
+    <script
+      src="../wp-content/plugins/elementor/assets/js/webpack.runtime.min1c88.js?ver=3.26.4"
+      id="elementor-webpack-runtime-js"
+    ></script>
+    <script
+      src="../wp-content/plugins/elementor/assets/js/frontend-modules.min1c88.js?ver=3.26.4"
+      id="elementor-frontend-modules-js"
+    ></script>
+    <script
+      src="../wp-includes/js/jquery/ui/core.minb37e.js?ver=1.13.3"
+      id="jquery-ui-core-js"
+    ></script>
+    <script id="elementor-frontend-js-before">
+      var elementorFrontendConfig = {
+        environmentMode: {
+          edit: false,
+          wpPreview: false,
+          isScriptDebug: false,
+        },
+        i18n: {
+          shareOnFacebook: "Share on Facebook",
+          shareOnTwitter: "Share on Twitter",
+          pinIt: "Pin it",
+          download: "Download",
+          downloadImage: "Download image",
+          fullscreen: "Fullscreen",
+          zoom: "Zoom",
+          share: "Share",
+          playVideo: "Play Video",
+          previous: "Previous",
+          next: "Next",
+          close: "Close",
+          a11yCarouselPrevSlideMessage: "Previous slide",
+          a11yCarouselNextSlideMessage: "Next slide",
+          a11yCarouselFirstSlideMessage: "This is the first slide",
+          a11yCarouselLastSlideMessage: "This is the last slide",
+          a11yCarouselPaginationBulletMessage: "Go to slide",
+        },
+        is_rtl: false,
+        breakpoints: { xs: 0, sm: 480, md: 768, lg: 1025, xl: 1440, xxl: 1600 },
+        responsive: {
+          breakpoints: {
+            mobile: {
+              label: "Mobile Portrait",
+              value: 767,
+              default_value: 767,
+              direction: "max",
+              is_enabled: true,
+            },
+            mobile_extra: {
+              label: "Mobile Landscape",
+              value: 880,
+              default_value: 880,
+              direction: "max",
+              is_enabled: false,
+            },
+            tablet: {
+              label: "Tablet Portrait",
+              value: 1024,
+              default_value: 1024,
+              direction: "max",
+              is_enabled: true,
+            },
+            tablet_extra: {
+              label: "Tablet Landscape",
+              value: 1200,
+              default_value: 1200,
+              direction: "max",
+              is_enabled: false,
+            },
+            laptop: {
+              label: "Laptop",
+              value: 1366,
+              default_value: 1366,
+              direction: "max",
+              is_enabled: false,
+            },
+            widescreen: {
+              label: "Widescreen",
+              value: 2400,
+              default_value: 2400,
+              direction: "min",
+              is_enabled: false,
+            },
+          },
+          hasCustomBreakpoints: false,
+        },
+        version: "3.26.4",
+        is_static: false,
+        experimentalFeatures: {
+          e_font_icon_svg: true,
+          additional_custom_breakpoints: true,
+          e_swiper_latest: true,
+          e_nested_atomic_repeaters: true,
+          e_onboarding: true,
+          e_css_smooth_scroll: true,
+          home_screen: true,
+          "landing-pages": true,
+          "nested-elements": true,
+          editor_v2: true,
+          "link-in-bio": true,
+          "floating-buttons": true,
+        },
+        urls: {
+          assets:
+            "https:\/\/outgrid.uicore.co\/cleaning-company\/wp-content\/plugins\/elementor\/assets\/",
+          ajaxurl:
+            "https:\/\/outgrid.uicore.co\/cleaning-company\/wp-admin\/admin-ajax.php",
+          uploadUrl:
+            "https:\/\/outgrid.uicore.co\/cleaning-company\/wp-content\/uploads\/sites\/37",
+        },
+        nonces: { floatingButtonsClickTracking: "cc52c350dc" },
+        swiperClass: "swiper",
+        settings: {
+          page: {
+            element_pack_global_tooltip_width: {
+              unit: "px",
+              size: "",
+              sizes: [],
+            },
+            element_pack_global_tooltip_width_tablet: {
+              unit: "px",
+              size: "",
+              sizes: [],
+            },
+            element_pack_global_tooltip_width_mobile: {
+              unit: "px",
+              size: "",
+              sizes: [],
+            },
+            element_pack_global_tooltip_padding: {
+              unit: "px",
+              top: "",
+              right: "",
+              bottom: "",
+              left: "",
+              isLinked: true,
+            },
+            element_pack_global_tooltip_padding_tablet: {
+              unit: "px",
+              top: "",
+              right: "",
+              bottom: "",
+              left: "",
+              isLinked: true,
+            },
+            element_pack_global_tooltip_padding_mobile: {
+              unit: "px",
+              top: "",
+              right: "",
+              bottom: "",
+              left: "",
+              isLinked: true,
+            },
+            element_pack_global_tooltip_border_radius: {
+              unit: "px",
+              top: "",
+              right: "",
+              bottom: "",
+              left: "",
+              isLinked: true,
+            },
+            element_pack_global_tooltip_border_radius_tablet: {
+              unit: "px",
+              top: "",
+              right: "",
+              bottom: "",
+              left: "",
+              isLinked: true,
+            },
+            element_pack_global_tooltip_border_radius_mobile: {
+              unit: "px",
+              top: "",
+              right: "",
+              bottom: "",
+              left: "",
+              isLinked: true,
+            },
+          },
+          editorPreferences: [],
+        },
+        kit: {
+          active_breakpoints: ["viewport_mobile", "viewport_tablet"],
+          global_image_lightbox: "yes",
+          lightbox_enable_counter: "yes",
+          lightbox_enable_fullscreen: "yes",
+          lightbox_enable_zoom: "yes",
+          lightbox_enable_share: "yes",
+          lightbox_title_src: "title",
+          lightbox_description_src: "description",
+        },
+        post: {
+          id: 663,
+          title: "Get%20a%20Quote%20%E2%80%93%20Cleaning%20Company",
+          excerpt: "",
+          featuredImage: false,
+        },
+      };
+    </script>
     <script
       src="../wp-content/plugins/elementor/assets/js/frontend.min1c88.js?ver=3.26.4"
       id="elementor-frontend-js"
