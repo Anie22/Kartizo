@@ -131,13 +131,38 @@
         margin-top: 15px !important;
         cursor: pointer;
         border-radius: 4px;
+        overflow: hidden !important;
       }
 
       .loader {
-        text-align: center;
-        margin-top: 10px;
-        font-size: 16px;
-        color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: #3636363f;
+        padding-right: 12px;
+        z-index: 99;
+      }
+
+      .load{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border-top: 5px solid #fff;
+        border-bottom: 5px solid #fff;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        from{
+          transform: rotate(0deg);
+        } to {
+          transform: rotate(360deg);
+        }
       }
 
       .error-box {
@@ -725,7 +750,6 @@
                               id="customDate"
                               name="date"
                               placeholder="Select a date"
-                              required
                             />
 
                             <label for="time">Preferred Time</label>
@@ -749,17 +773,18 @@
                               id="info"
                               name="info"
                               placeholder="Other info"
-                              required
                             ></textarea>
 
-                            <button type="submit">Book Now</button>
-                            <div
-                              id="loader"
-                              class="loader"
-                              style="display: none"
-                            >
-                              Submitting...
-                            </div>
+                            <button type="submit" style="position: relative;" id="btn">
+                              <span>Book Now</span>
+                              <div
+                                id="loader"
+                                class="loader"
+                                style="display: none; position: absolute; height: 100%; width: 100%;"
+                              >
+                                <div class="load"></div>
+                              </div>
+                          </button>
                           </form>
                         </div>
                       </div>
@@ -2269,7 +2294,7 @@
     <!-- 1.7 uicore_after_body_content -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-      flatpickr("#customDate", { enableTime: false, dateFormat: "Y-m-d" });
+      flatpickr("#customDate", { enableTime: false, dateFormat: "F d, Y" });
       flatpickr("#customTime", {
         enableTime: true,
         noCalendar: true,
@@ -2310,7 +2335,7 @@
         .addEventListener("submit", function (event) {
           event.preventDefault();
           document.getElementById("errorBox").style.display = "none";
-          document.getElementById("loader").style.display = "block";
+          document.getElementById("loader").style.display = "flex";
 
           let fullName = document.getElementById("name").value.trim();
           let email = document.getElementById("email").value.trim();
@@ -2332,13 +2357,14 @@
             !service ||
             !date ||
             !time ||
-            !address ||
-            !message
+            !address
           ) {
             errorBox.innerHTML =
               "All fields are required.";
             errorBox.style.display = "block";
+            errorBox.classList.add('error-box');
             document.getElementById("loader").style.display = "none";
+            
             window.location.href = '#quForm'
             return;
           }
@@ -2346,7 +2372,7 @@
           if (!/^[a-zA-Z\s]+$/.test(fullName)) {
             errorBox.innerHTML = "Name must contain only letters.";
             errorBox.style.display = "block";
-              errorBox.classList.add('error-box');
+            errorBox.classList.add('error-box');
             document.getElementById("loader").style.display = "none";
             return;
           }
@@ -2383,7 +2409,7 @@
             message,
           };
           console.log(formData)
-          fetch("https://kartizo-api.onrender.com/contact", {
+          fetch("http://kartizoglobal.com/backend-app/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
@@ -2399,6 +2425,8 @@
               errorBox.innerHTML = data.message;
               errorBox.style.display = "block";
               errorBox.classList.add('success');
+              
+              console.log(data)
 
               if(!data.message){
                 errorBox.innerHTML = data.phoneNumber[0];
@@ -2407,18 +2435,22 @@
               setTimeout(() => {
                 errorBox.style.display = "none";
                 form.reset();
+                window.reload()
               }, 3500);
             })
             .catch((error) => {
+                console.log(error)
               document.getElementById("loader").style.display = "none";
               errorBox.innerHTML = error;
               errorBox.style.display = "block";
               errorBox.classList.add('error-box')
 
+
               setTimeout(() => {
                 errorBox.style.display = "none";
               }, 3500);
             });
+
 
         });
     </script>
